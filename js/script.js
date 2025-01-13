@@ -6,3 +6,41 @@
 
 // MILESTONE 3:
 // Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.
+
+// dichiarazione variabili
+const form = document.querySelector('form');
+const kmField = document.getElementById('distanza');
+const ageField = document.getElementById('etaUtente')
+
+
+const kmUser = kmField.value;
+
+// FUNZIONE
+form.addEventListener('submit', (event) => {
+
+    // evitare il comportamento di default del form
+    event.preventDefault();
+
+    // calcolare il prezzo del biglietto in base ai km
+    let prezzoIntero = kmUser * 0.21;
+    console.log("Il prezzo del biglietto senza sconto è: ", prezzoIntero);
+     
+    // calcolare lo sconto
+
+    if (ageField.value < 18){
+        prezzoIntero = prezzoIntero * 0.80;
+
+    } else if (ageField.value >= 65){
+        prezzoIntero = prezzoIntero * 0.60;
+
+    }else{
+        prezzoIntero;
+    }
+
+    // OUTPUT
+    console.log("il prezzo finale è di: ", prezzoIntero.toFixed(2));
+});
+
+
+
+
