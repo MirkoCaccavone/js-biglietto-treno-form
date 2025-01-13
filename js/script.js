@@ -12,8 +12,8 @@ const form = document.querySelector('form');
 const kmField = document.getElementById('distanza');
 const ageField = document.getElementById('etaUtente')
 
-
 const kmUser = kmField.value;
+const price = document.getElementById('price');
 
 // FUNZIONE
 form.addEventListener('submit', (event) => {
@@ -39,6 +39,10 @@ form.addEventListener('submit', (event) => {
 
     // OUTPUT
     console.log("il prezzo finale è di: ", prezzoIntero.toFixed(2));
+
+    // prezzo finale mostrato in pagina
+    price.innerHTML = `${"il prezzo da pagare è :"} ${prezzoIntero.toFixed(2) + "€"}`;
+
 });
 
 
