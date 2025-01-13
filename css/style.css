@@ -5,8 +5,10 @@
 }
 
 main{
+    min-height: 100vh;
     text-align: center;    
     background-color: #d30f0f;
+    padding-bottom: 30px;
 }
 
 h1{
@@ -18,7 +20,7 @@ h1{
 .downContainer{
     background-color: #f1f1f1;
     width: 70%;
-    margin: 30px auto;
+    margin: 50px auto;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
@@ -53,31 +55,18 @@ button{
 
 .nomeCognome{
     flex-grow: 2;
-    /* DEBUG */
-    background-color: aqua;
-    height: 100px;
-    width: 100px;
 }
-.carrozza{
-    flex-basis: 20%;
-    /* DEBUG */
-    background-color: blue;
-    height: 100px;
-    width: 100px;
-}
-
-.codiceCp{
-    flex-basis: 20%;
-    /* DEBUG */
-    background-color: green;
-    height: 100px;
-    width: 100px;
-}
-
+.carrozza,
+.codiceCp,
 .costoBiglietto{
     flex-basis: 20%;
-    /* DEBUG */
-    background-color: yellow;
-    height: 100px;
-    width: 100px;
+}
+
+h3, h4{
+    margin-bottom: 20px;
+}
+
+span{
+    font-size: 20px;
+    font-weight: bold; 
 }
