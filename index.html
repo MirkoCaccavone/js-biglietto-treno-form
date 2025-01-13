@@ -7,15 +7,78 @@
     <title>biglietto treno form</title>
 </head>
 <body>
-    <form action="#">
-        <input type="text" placeholder="inserisci distanza in km" id="distanza">
-        <input type="text" placeholder="inserisci età" id="etaUtente">
-        </select>
-        <button>Invia</button>
-    </form>
-    <p id="price">
+    <main>
+        <h1>
+            BoolTrain
+        </h1>
 
-    </p>
+        <!-- container con form per calcolare il prezzo -->
+        <div class="upContainer">
+            <h2>
+                Calcola il tuo biglietto
+            </h2>
+            <form action="#">
+
+                <div class="datiUtente">
+                    <div>
+                    <h3>Nome Cognome</h3>
+                    <input type="text" placeholder="inserisci nome e cognome" id="nomeUtente">
+                    </div>
+
+                    <div>
+                        <h3>Distanza</h3>
+                        <input type="text" placeholder="inserisci distanza in km" id="distanza">
+                    </div>
+
+                    <div>
+                        <h3>Età</h3>
+                        <input type="text" placeholder="inserisci età" id="etaUtente">
+                    </div>
+                </div>
+                
+                <button>Calcola</button>
+            </form>
+        </div>
+        
+        <!-- container con output del biglietto -->
+        <div class="downContainer">
+            <h2>
+                Il tuo biglietto
+            </h2>
+            <div id = "biglietto">
+
+                <div class="nomeCognome">
+                    <h3>
+                        Nome Cognome
+                    </h3>
+                    <span id="name"></span>
+                </div>
+
+                <div class="carrozza">
+                    <h4>
+                        Carrozza
+                    </h4>
+                    <span id="cab"></span>
+                </div>
+
+                <div class="codiceCp">
+                    <h4>
+                        Codice CP
+                    </h4>
+                    <span id="cpCode"></span>
+                </div>
+
+                <div class="costoBiglietto">
+                    <h4>
+                        Costo Biglietto
+                    </h4>
+                    <span id="price"></span>
+                </div>
+
+            </div>
+            
+        </div>
+    </main>
     <script src="./js/script.js"></script>
 </body>
 </html>

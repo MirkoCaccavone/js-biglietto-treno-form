@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    text-align: center;    
+    background-color: #d30f0f;
+}
+
+h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.upContainer,
+.downContainer{
+    background-color: #f1f1f1;
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.datiUtente{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+input{
+    margin: 20px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#biglietto{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    
+}
+
+.nomeCognome{
+    flex-grow: 2;
+    /* DEBUG */
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+}
+.carrozza{
+    flex-basis: 20%;
+    /* DEBUG */
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+}
+
+.codiceCp{
+    flex-basis: 20%;
+    /* DEBUG */
+    background-color: green;
+    height: 100px;
+    width: 100px;
+}
+
+.costoBiglietto{
+    flex-basis: 20%;
+    /* DEBUG */
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+}
