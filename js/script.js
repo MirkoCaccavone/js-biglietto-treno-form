@@ -9,11 +9,18 @@
 
 // dichiarazione variabili
 const form = document.querySelector('form');
+const nomeUtente = document.getElementById('nomeUtente');
 const kmField = document.getElementById('distanza');
 const ageField = document.getElementById('etaUtente')
 
 const kmUser = kmField.value;
+
+
+const name = document.getElementById('name');
+const cab = document.getElementById('cab');
+const cpCode = document.getElementById('cpCode');
 const price = document.getElementById('price');
+
 
 // FUNZIONE
 form.addEventListener('submit', (event) => {
@@ -40,8 +47,17 @@ form.addEventListener('submit', (event) => {
     // OUTPUT
     console.log("il prezzo finale è di: ", prezzoIntero.toFixed(2));
 
+    // nome passeggero
+    name.innerText = `${nomeUtente.value}`;
+
+    // carrozza
+    cab.innerText = `${Math.floor(Math.random() * 10) + 1}`;
+
+    // codice cp
+    cpCode.innerText = `${Math.floor(Math.random() * 10000) + 90000}`;
+
     // prezzo finale mostrato in pagina
-    price.innerHTML = `${"il prezzo da pagare è :"} ${prezzoIntero.toFixed(2) + "€"}`;
+    price.innerHTML = `${prezzoIntero.toFixed(2) + "€"}`;
 
 });
 
