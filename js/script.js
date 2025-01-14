@@ -7,15 +7,14 @@
 // MILESTONE 3:
 // Ora che la logica è funzionante in pagina, possiamo andare a dedicarci allo stile, raffinando la parte di HTML e CSS in modo da renderla esteticamente gradevole.
 
-// dichiarazione variabili
+// selezione elementi di input
 const form = document.querySelector('form');
 const nomeUtente = document.getElementById('nomeUtente');
 const kmField = document.getElementById('distanza');
 const ageField = document.getElementById('etaUtente')
 
-const kmUser = kmField.value;
 
-
+// selezione elementi di output
 const name = document.getElementById('name');
 const cab = document.getElementById('cab');
 const cpCode = document.getElementById('cpCode');
@@ -28,16 +27,20 @@ form.addEventListener('submit', (event) => {
     // evitare il comportamento di default del form
     event.preventDefault();
 
+    // rendiamo dei numeri le stringhe inserite dall'utente
+    const kmUser = parseInt(kmField.value);
+    const ageUser = parseInt(ageField.value);
+
     // calcolare il prezzo del biglietto in base ai km
     let prezzoIntero = kmUser * 0.21;
     console.log("Il prezzo del biglietto senza sconto è: ", prezzoIntero);
      
     // calcolare lo sconto
 
-    if (ageField.value < 18){
+    if (ageUser < 18){
         prezzoIntero = prezzoIntero * 0.80;
 
-    } else if (ageField.value >= 65){
+    } else if (ageUser >= 65){
         prezzoIntero = prezzoIntero * 0.60;
 
     }else{
@@ -57,7 +60,7 @@ form.addEventListener('submit', (event) => {
     cpCode.innerText = `${Math.floor(Math.random() * 10000) + 90000}`;
 
     // prezzo finale mostrato in pagina
-    price.innerHTML = `${prezzoIntero.toFixed(2) + "€"}`;
+    price.innerHTML = `${prezzoIntero.toFixed(2)}€`;
 
 });
 
